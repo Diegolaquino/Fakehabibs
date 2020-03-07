@@ -7,9 +7,9 @@ class MyPage extends StatefulWidget {
 
 class _MyPageState extends State<MyPage> {
 
-  var _imageApp = AssetImage("images/logo1.png");
-  var _imageGenioApp = AssetImage("images/genio.png");
-  var _imageFood = AssetImage("images/esfiha.png");
+  final AssetImage _imageApp = AssetImage("images/logo1.png");
+  final _imageGenioApp = AssetImage("images/genio.png");
+  final _imageFood = AssetImage("images/esfiha.png");
 
   @override
   Widget build(BuildContext context) {
@@ -99,6 +99,7 @@ class _MyPageState extends State<MyPage> {
           ],
         ),
         padding: EdgeInsets.all(20),
+        color: Color(0XFFe2e2e2),
       ),
       bottomNavigationBar: BottomAppBar(
         child: Container(
