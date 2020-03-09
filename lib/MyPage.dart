@@ -96,25 +96,60 @@ class _MyPageState extends State<MyPage> {
                 image: _imageFood,
               ),
             ),
+            Row(
+              children: <Widget>[
+                Container(
+                  margin: EdgeInsets.only(top: 10, right: 5),
+                  color: Color(0xFFeb1e23),
+                  width: 100,
+                  height: 180,
+                  child: Column(
+                    children: <Widget>[
+                      Icon(Icons.directions_run, color: Colors.white, size: 60,),
+                      Text("delivery", 
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                      ),),
+                    ],
+                  ),
+                ),
+                Container(
+                  margin: EdgeInsets.only(top: 10, left: 5),
+                  color: Color(0xFFf5781e),
+                  width: 100,
+                  height: 180,
+                  child: Column(
+                    children: <Widget>[
+                      Icon(Icons.local_play, color: Colors.white, size: 60,),
+                      Text("cupons de vantagens", style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                      ),),
+                    ],
+                  ),
+                ),
+                Container(
+                  margin: EdgeInsets.only(top: 10, left: 8),
+                  color: Color(0xFFeec630),
+                  width: 100,
+                  height: 180,
+                  child: Column(
+                    children: <Widget>[
+                      Icon(Icons.place, color: Colors.white, size: 60,),
+                      Text("restaurantes", style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                      ),),
+                    ],
+                  ),
+                ),
+              ],
+            )
           ],
         ),
         padding: EdgeInsets.all(20),
         color: Color(0XFFe2e2e2),
-      ),
-      bottomNavigationBar: BottomAppBar(
-        child: Container(
-          child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  mainAxisSize: MainAxisSize.max,
-                  children: <Widget>[
-                    IconButton(icon: Icon(Icons.home, color: Colors.white), onPressed: (){}, padding: EdgeInsets.only(left: 30), iconSize: 30,),
-                    IconButton(icon: Icon(Icons.local_offer, color: Colors.white),onPressed: (){}, iconSize: 30,),
-                    IconButton(icon: Icon(Icons.near_me, color: Colors.white,), onPressed: (){}, padding: EdgeInsets.only(right: 30), iconSize: 30,),
-                  ],
-                ),
-          height: 60,
-        ),
-        color: Color(0xFFeb1e23),
       ),
     );
   }
