@@ -103,9 +103,15 @@ class _MyPageState extends State<MyPage> {
                   color: Color(0xFFeb1e23),
                   width: 100,
                   height: 180,
-                  child: Column(
+                  child: FlatButton(
+                    onPressed: (){
+                      print("Teste do diego");
+                    }, 
+                    child: Column(
                     children: <Widget>[
-                      Icon(Icons.directions_run, color: Colors.white, size: 60,),
+                      Padding(
+                        padding:  EdgeInsets.only(top: 37),
+                        child: Icon(Icons.directions_run, color: Colors.white, size: 60,),),
                       Text("delivery", 
                       style: TextStyle(
                         color: Colors.white,
@@ -113,20 +119,28 @@ class _MyPageState extends State<MyPage> {
                       ),),
                     ],
                   ),
+                  ),
                 ),
                 Container(
                   margin: EdgeInsets.only(top: 10, left: 5),
                   color: Color(0xFFf5781e),
                   width: 100,
                   height: 180,
-                  child: Column(
+                  child: FlatButton(
+                    onPressed: (){
+                      print("meio button");
+                    },
+                    child: Column(
                     children: <Widget>[
-                      Icon(Icons.local_play, color: Colors.white, size: 60,),
-                      Text("cupons de vantagens", style: TextStyle(
+                      Padding(
+                        padding: EdgeInsets.only(top: 35),
+                        child: Icon(Icons.local_play, color: Colors.white, size: 60,),),
+                      Text("cupons de vantagens", textAlign: TextAlign.center ,style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.bold,
                       ),),
                     ],
+                  ),
                   ),
                 ),
                 Container(
@@ -134,14 +148,22 @@ class _MyPageState extends State<MyPage> {
                   color: Color(0xFFeec630),
                   width: 100,
                   height: 180,
-                  child: Column(
+                  child: FlatButton(
+                    onPressed: (){
+                      print("mapas");
+                    }, 
+                    child: Column(
                     children: <Widget>[
-                      Icon(Icons.place, color: Colors.white, size: 60,),
-                      Text("restaurantes", style: TextStyle(
+                      Padding(
+                        padding: EdgeInsets.only(top: 35),
+                        child:Icon(Icons.place, color: Colors.white, size: 60,),
+                      ),
+                      Text("locais", style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.bold,
                       ),),
                     ],
+                  ),
                   ),
                 ),
               ],
