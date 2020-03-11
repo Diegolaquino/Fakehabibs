@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:habibs/TelaPromocao.dart';
 
 class MyPage extends StatefulWidget {
   @override
@@ -129,6 +130,7 @@ class _MyPageState extends State<MyPage> {
                   child: FlatButton(
                     onPressed: (){
                       print("meio button");
+                      Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => TelaPromocao()));
                     },
                     child: Column(
                     children: <Widget>[
