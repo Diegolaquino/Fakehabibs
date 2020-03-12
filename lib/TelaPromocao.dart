@@ -7,9 +7,9 @@ class TelaPromocao extends StatefulWidget {
 
 class _TelaPromocaoState extends State<TelaPromocao> {
 
-  final AssetImage _imageApp = AssetImage("images/logo1.png");
-  final _imageGenioApp = AssetImage("images/genio.png");
-  final _imageFood = AssetImage("images/esfiha.png");
+  // final _imageApp = AssetImage("images/logo1.png");
+  // final _imageGenioApp = AssetImage("images/genio.png");
+  // final _imageFood = AssetImage("images/esfiha.png");
 
   @override
   Widget build(BuildContext context) {

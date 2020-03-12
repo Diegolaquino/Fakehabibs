@@ -82,6 +82,36 @@ class _MyPageState extends State<MyPage> {
               ),
               ),
               ),
+              Container(
+                margin: EdgeInsets.only(top: 120),
+                child: SizedBox(
+                  child: Text("REGRAS DO DELIVERY", style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 10,
+                    ),
+                  ),
+                  )
+              ),
+              Container(
+                margin: EdgeInsets.only(top: 10),
+                child: SizedBox(
+                  child: Text("TERMOS DE USO E POLITICA DE PRIVACIDADE", style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 10,
+                    ),
+                  ),
+                  )
+              ),
+              Container(
+                margin: EdgeInsets.only(top: 10),
+                child: SizedBox(
+                  child: Text("VERSÃO: 0.0.01", style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 10,
+                    ),
+                  ),
+                  )
+              ),
 
             ],
           ),
@@ -100,8 +130,15 @@ class _MyPageState extends State<MyPage> {
             Row(
               children: <Widget>[
                 Container(
+                  //decoração com border radius
+                  decoration: BoxDecoration(
+                    color: Color(0xFFeb1e23),
+                     borderRadius: BorderRadius.all(
+                      Radius.circular(5.0) //                 <--- border radius here
+                      )
+                  ),
                   margin: EdgeInsets.only(top: 10, right: 5),
-                  color: Color(0xFFeb1e23),
+                  //color: Color(0xFFeb1e23),
                   width: 100,
                   height: 180,
                   child: FlatButton(
@@ -123,8 +160,14 @@ class _MyPageState extends State<MyPage> {
                   ),
                 ),
                 Container(
+                  decoration: BoxDecoration(
+                    color: Color(0xFFf5781e),
+                     borderRadius: BorderRadius.all(
+                      Radius.circular(5.0) //                 <--- border radius here
+                      )
+                  ),
                   margin: EdgeInsets.only(top: 10, left: 5),
-                  color: Color(0xFFf5781e),
+                  //color: Color(0xFFf5781e),
                   width: 100,
                   height: 180,
                   child: FlatButton(
@@ -146,8 +189,14 @@ class _MyPageState extends State<MyPage> {
                   ),
                 ),
                 Container(
+                  decoration: BoxDecoration(
+                    color: Color(0xFFeec630),
+                     borderRadius: BorderRadius.all(
+                      Radius.circular(5.0) //                 <--- border radius here
+                      )
+                  ),
                   margin: EdgeInsets.only(top: 10, left: 8),
-                  color: Color(0xFFeec630),
+                  //color: Color(0xFFeec630),
                   width: 100,
                   height: 180,
                   child: FlatButton(
