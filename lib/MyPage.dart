@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:habibs/TelaPromocao.dart';
+import 'package:flutter/services.dart';
 
 class MyPage extends StatefulWidget {
   @override
@@ -11,6 +12,16 @@ class _MyPageState extends State<MyPage> {
   final AssetImage _imageApp = AssetImage("images/logo1.png");
   final _imageGenioApp = AssetImage("images/genio.png");
   final _imageFood = AssetImage("images/esfiha.png");
+
+  @override
+  void initState(){
+    super.initState();
+    //Bloqueia rotação da tela
+    SystemChrome.setPreferredOrientations([
+        DeviceOrientation.portraitUp,
+        DeviceOrientation.portraitDown,
+    ]);
+  }
 
   @override
   Widget build(BuildContext context) {

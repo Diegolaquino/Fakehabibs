@@ -5,4 +5,5 @@ import 'MyPage.dart';
 
 void main() => runApp(MaterialApp(
   home: MyPage(),
+  debugShowCheckedModeBanner: false,
 ));
