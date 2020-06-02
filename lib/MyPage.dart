@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:habibs/TelaPromocao.dart';
 import 'package:flutter/services.dart';
 
 import 'componentes/ButtonContainer.dart';
 import 'componentes/MainMenuOption.dart';
+import 'helpers/TipoTela.dart';
 import 'helpers/Utils.dart';
 
 class MyPage extends StatefulWidget {
@@ -75,6 +75,7 @@ class _MyPageState extends State<MyPage> {
             ),
             Row(
               children: <Widget>[
+                // botão delivery
                 ButtonContainer(
                   color: Color(Utils.VermelhoPrincipal),
                   icon: Icon(
@@ -82,7 +83,9 @@ class _MyPageState extends State<MyPage> {
                     color: Colors.white,
                     size: 60,
                   ),
+                  tela: TipoTela.Login,
                 ),
+                 // botão descontos
                 ButtonContainer(
                   color: Color(Utils.Laranja),
                   icon: Icon(
@@ -90,7 +93,9 @@ class _MyPageState extends State<MyPage> {
                             color: Colors.white,
                             size: 60,
                   ),
+                  tela: TipoTela.Login,
                 ),
+                 // botão restaurantes
                 ButtonContainer(
                   color: Color(Utils.Amarelo),
                   icon: Icon(
@@ -98,6 +103,7 @@ class _MyPageState extends State<MyPage> {
                             color: Colors.white,
                             size: 60,
                   ),
+                  tela: TipoTela.Login,
                 ),
               ],
             )

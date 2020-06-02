@@ -1,13 +1,17 @@
 import 'package:flutter/material.dart';
 
+import '../Login.dart';
+
 class ButtonContainer extends StatelessWidget {
 
   Icon icon;
   Color color;
+  var tela = 0;
 
   ButtonContainer({
     @required this.color,
-    @required this.icon
+    @required this.icon,
+     @required this.tela
   });
   
   @override
@@ -25,7 +29,13 @@ class ButtonContainer extends StatelessWidget {
       height: 180,
       child: FlatButton(
         onPressed: () {
-          print("Teste do diego");
+          if(tela == 1){
+            Navigator.push(context, MaterialPageRoute(builder: (BuildContext buildeContext) => Login()));
+          }
+          else{
+            Navigator.push(context, MaterialPageRoute(builder: (BuildContext buildeContext) => Login()));
+          }
+          
         },
         child: Column(
           children: <Widget>[
