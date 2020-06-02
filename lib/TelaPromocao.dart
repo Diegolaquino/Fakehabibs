@@ -20,7 +20,7 @@ class _TelaPromocaoState extends State<TelaPromocao> {
         backgroundColor: Color(0xFFeb1e23),
         centerTitle: true,
        ),
-        body: Container(child: Text("Teste"),)
+        body: Container(child: Text("Teste" + context.toString()),)
       ),
     );
   }

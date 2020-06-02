@@ -2,24 +2,27 @@ import 'package:flutter/material.dart';
 import 'package:habibs/TelaPromocao.dart';
 import 'package:flutter/services.dart';
 
+import 'componentes/ButtonContainer.dart';
+import 'componentes/MainMenuOption.dart';
+import 'helpers/Utils.dart';
+
 class MyPage extends StatefulWidget {
   @override
   _MyPageState createState() => _MyPageState();
 }
 
 class _MyPageState extends State<MyPage> {
-
   final AssetImage _imageApp = AssetImage("images/logo1.png");
   final _imageGenioApp = AssetImage("images/genio.png");
   final _imageFood = AssetImage("images/esfiha.png");
 
   @override
-  void initState(){
+  void initState() {
     super.initState();
     //Bloqueia rotação da tela
     SystemChrome.setPreferredOrientations([
-        DeviceOrientation.portraitUp,
-        DeviceOrientation.portraitDown,
+      DeviceOrientation.portraitUp,
+      DeviceOrientation.portraitDown,
     ]);
   }
 
@@ -29,10 +32,10 @@ class _MyPageState extends State<MyPage> {
       appBar: AppBar(
         elevation: 4,
         title: Image(
-          image: _imageApp, 
+          image: _imageApp,
           alignment: Alignment.center,
-          height: 30,),
-        
+          height: 30,
+        ),
         backgroundColor: Color(0xFFeb1e23),
         centerTitle: true,
       ),
@@ -42,92 +45,24 @@ class _MyPageState extends State<MyPage> {
           child: Column(
             children: <Widget>[
               Container(
-                margin: EdgeInsets.only(left: 30, top: 50, right: 30, bottom: 10),
-                child: Image(
-                image: _imageGenioApp, 
-                alignment: Alignment.center,
-                height: 110,)
-              ),
-              Container(
-                margin: EdgeInsets.only(top: 30),
-                child:Text("SEJA GÊNIO ;)", style: TextStyle(
-                fontWeight: FontWeight.w700,
-                color: Colors.white,
-                fontSize: 15,
-              ),
-              ),
-              ),
-              Container(
-                margin: EdgeInsets.only(top: 30),
-                child: Text("FAÇA LOGIN", style: TextStyle(
-                fontWeight: FontWeight.w700,
-                color: Colors.white,
-                fontSize: 15,
-              ),
-              ),
-              ),
-              Container(
-                margin: EdgeInsets.only(top: 30),
-                child: Text("CARDÁPIO", style: TextStyle(
-                fontWeight: FontWeight.w700,
-                color: Colors.white,
-                fontSize: 15,
-              ),
-              ),
-              ),
-              Container(
-                margin: EdgeInsets.only(top: 30),
-                child: Text("CUPONS", style: TextStyle(
-                fontWeight: FontWeight.w700,
-                color: Colors.white,
-                fontSize: 15,
-              ),
-              ),
-              ),
-              Container(
-                margin: EdgeInsets.only(top: 30),
-                child: Text("ENCONTRE SEU HABIBS", style: TextStyle(
-                fontWeight: FontWeight.w700,
-                color: Colors.white,
-                fontSize: 15,
-              ),
-              ),
-              ),
-              Container(
-                margin: EdgeInsets.only(top: 120),
-                child: SizedBox(
-                  child: Text("REGRAS DO DELIVERY", style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 10,
-                    ),
-                  ),
-                  )
-              ),
-              Container(
-                margin: EdgeInsets.only(top: 10),
-                child: SizedBox(
-                  child: Text("TERMOS DE USO E POLITICA DE PRIVACIDADE", style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 10,
-                    ),
-                  ),
-                  )
-              ),
-              Container(
-                margin: EdgeInsets.only(top: 10),
-                child: SizedBox(
-                  child: Text("VERSÃO: 0.0.01", style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 10,
-                    ),
-                  ),
-                  )
-              ),
-
+                  margin:
+                      EdgeInsets.only(left: 30, top: 50, right: 30, bottom: 10),
+                  child: Image(
+                    image: _imageGenioApp,
+                    alignment: Alignment.center,
+                    height: 110,
+                  )),
+              MainMenuOption(text: "SEJA GÊNIO ;)"),
+              MainMenuOption(text: "FAÇA LOGIN"),
+              MainMenuOption(text: "CARDÁPIO"),
+              MainMenuOption(text: "CUPONS"),
+              MainMenuOption(text: "ENCONTRE SEU HABIBS"),
+              MainMenuOption(text: "REGRAS DO DELIVERY"),
+              MainMenuOption(text: "TERMOS DE USO E POLITICA DE PRIVACIDADE"),
+              MainMenuOption(text: "VERSÃO: 0.0.01"),
             ],
           ),
-        
-      ),
+        ),
       ),
       body: Container(
         child: Column(
@@ -140,92 +75,28 @@ class _MyPageState extends State<MyPage> {
             ),
             Row(
               children: <Widget>[
-                Container(
-                  //decoração com border radius
-                  decoration: BoxDecoration(
-                    color: Color(0xFFeb1e23),
-                     borderRadius: BorderRadius.all(
-                      Radius.circular(5.0) //                 <--- border radius here
-                      )
-                  ),
-                  margin: EdgeInsets.only(top: 10, right: 5),
-                  //color: Color(0xFFeb1e23),
-                  width: 100,
-                  height: 180,
-                  child: FlatButton(
-                    onPressed: (){
-                      print("Teste do diego");
-                    }, 
-                    child: Column(
-                    children: <Widget>[
-                      Padding(
-                        padding:  EdgeInsets.only(top: 37),
-                        child: Icon(Icons.directions_run, color: Colors.white, size: 60,),),
-                      Text("delivery", 
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold,
-                      ),),
-                    ],
-                  ),
+                ButtonContainer(
+                  color: Color(Utils.VermelhoPrincipal),
+                  icon: Icon(
+                    Icons.directions_run,
+                    color: Colors.white,
+                    size: 60,
                   ),
                 ),
-                Container(
-                  decoration: BoxDecoration(
-                    color: Color(0xFFf5781e),
-                     borderRadius: BorderRadius.all(
-                      Radius.circular(5.0) //                 <--- border radius here
-                      )
-                  ),
-                  margin: EdgeInsets.only(top: 10, left: 5),
-                  //color: Color(0xFFf5781e),
-                  width: 100,
-                  height: 180,
-                  child: FlatButton(
-                    onPressed: (){
-                      print("meio button");
-                      Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => TelaPromocao()));
-                    },
-                    child: Column(
-                    children: <Widget>[
-                      Padding(
-                        padding: EdgeInsets.only(top: 35),
-                        child: Icon(Icons.local_play, color: Colors.white, size: 60,),),
-                      Text("cupons de vantagens", textAlign: TextAlign.center ,style: TextStyle(
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold,
-                      ),),
-                    ],
-                  ),
+                ButtonContainer(
+                  color: Color(Utils.Laranja),
+                  icon: Icon(
+                            Icons.local_play,
+                            color: Colors.white,
+                            size: 60,
                   ),
                 ),
-                Container(
-                  decoration: BoxDecoration(
-                    color: Color(0xFFeec630),
-                     borderRadius: BorderRadius.all(
-                      Radius.circular(5.0) //                 <--- border radius here
-                      )
-                  ),
-                  margin: EdgeInsets.only(top: 10, left: 8),
-                  //color: Color(0xFFeec630),
-                  width: 100,
-                  height: 180,
-                  child: FlatButton(
-                    onPressed: (){
-                      print("mapas");
-                    }, 
-                    child: Column(
-                    children: <Widget>[
-                      Padding(
-                        padding: EdgeInsets.only(top: 35),
-                        child:Icon(Icons.place, color: Colors.white, size: 60,),
-                      ),
-                      Text("locais", style: TextStyle(
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold,
-                      ),),
-                    ],
-                  ),
+                ButtonContainer(
+                  color: Color(Utils.Amarelo),
+                  icon: Icon(
+                            Icons.place,
+                            color: Colors.white,
+                            size: 60,
                   ),
                 ),
               ],
