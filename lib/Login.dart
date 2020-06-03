@@ -44,7 +44,7 @@ class Login extends StatelessWidget {
                   keyboardType: TextInputType.emailAddress,
                   decoration: new InputDecoration(
                     filled: true,
-                    hintStyle: new TextStyle(color: Colors.grey[800]),
+                    hintStyle: new TextStyle(color: Colors.white),
                     hintText: "E-mail",
                     fillColor: Colors.white70,
                     enabledBorder: OutlineInputBorder(
@@ -65,7 +65,7 @@ class Login extends StatelessWidget {
                   keyboardType: TextInputType.text,
                   decoration: new InputDecoration(
                     filled: true,
-                    hintStyle: new TextStyle(color: Colors.grey[800]),
+                    hintStyle: new TextStyle(color: Colors.white),
                     hintText: "Senha",
                     fillColor: Colors.white70,
                     enabledBorder: OutlineInputBorder(
