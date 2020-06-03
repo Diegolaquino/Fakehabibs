@@ -3,9 +3,11 @@ import 'package:flutter/material.dart';
 class MainMenuOption extends StatelessWidget {
 
   var text = "";
+  double fontSize;
 
   MainMenuOption({
     @required this.text,
+    this.fontSize = 15,
   });
 
   @override
@@ -17,7 +19,7 @@ class MainMenuOption extends StatelessWidget {
                   style: TextStyle(
                     fontWeight: FontWeight.w700,
                     color: Colors.white,
-                    fontSize: 15,
+                    fontSize: fontSize,
                   ),
                 ),
     );
