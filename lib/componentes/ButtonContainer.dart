@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:habibs/Cardapio.dart';
 
 import '../Login.dart';
 
@@ -33,7 +34,7 @@ class ButtonContainer extends StatelessWidget {
             Navigator.push(context, MaterialPageRoute(builder: (BuildContext buildeContext) => Login()));
           }
           else{
-            Navigator.push(context, MaterialPageRoute(builder: (BuildContext buildeContext) => Login()));
+            Navigator.push(context, MaterialPageRoute(builder: (BuildContext buildeContext) => Cardapio()));
           }
           
         },

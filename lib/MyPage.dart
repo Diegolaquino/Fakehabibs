@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:habibs/componentes/MainAppBar.dart';
+import 'package:habibs/componentes/MenuLateral.dart';
 
 import 'componentes/ButtonContainer.dart';
-import 'componentes/MainMenuOption.dart';
 import 'helpers/TipoTela.dart';
 import 'helpers/Utils.dart';
 
@@ -12,8 +13,7 @@ class MyPage extends StatefulWidget {
 }
 
 class _MyPageState extends State<MyPage> {
-  final AssetImage _imageApp = AssetImage("images/logo1.png");
-  final _imageGenioApp = AssetImage("images/genio.png");
+  
   final _imageFood = AssetImage("images/esfiha.png");
 
   @override
@@ -29,41 +29,10 @@ class _MyPageState extends State<MyPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        elevation: 4,
-        title: Image(
-          image: _imageApp,
-          alignment: Alignment.center,
-          height: 30,
-        ),
-        backgroundColor: Color(0xFFeb1e23),
-        centerTitle: true,
-      ),
-      drawer: Drawer(
-        child: Container(
-          color: Color(0xFFeb1e23),
-          child: Column(
-            children: <Widget>[
-              Container(
-                  margin:
-                      EdgeInsets.only(left: 30, top: 50, right: 30, bottom: 10),
-                  child: Image(
-                    image: _imageGenioApp,
-                    alignment: Alignment.center,
-                    height: 110,
-                  )),
-              MainMenuOption(text: "SEJA GÊNIO ;)"),
-              MainMenuOption(text: "FAÇA LOGIN"),
-              MainMenuOption(text: "CARDÁPIO"),
-              MainMenuOption(text: "CUPONS"),
-              MainMenuOption(text: "ENCONTRE SEU HABIBS"),
-              MainMenuOption(text: "REGRAS DO DELIVERY", fontSize: 10),
-              MainMenuOption(text: "TERMOS DE USO E POLITICA DE PRIVACIDADE", fontSize: 10),
-              MainMenuOption(text: "VERSÃO: 0.0.01", fontSize: 10),
-            ],
-          ),
-        ),
-      ),
+      appBar: PreferredSize(
+        child: MainAppBar(),
+         preferredSize: Size.fromHeight(60.0)),
+      drawer: MenuLateral(),
       body: Container(
         child: Column(
           children: <Widget>[
@@ -83,7 +52,7 @@ class _MyPageState extends State<MyPage> {
                     color: Colors.white,
                     size: 60,
                   ),
-                  tela: TipoTela.Login,
+                  tela: TipoTela.Cardapio,
                 ),
                  // botão descontos
                 ButtonContainer(
