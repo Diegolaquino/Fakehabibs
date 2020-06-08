@@ -9,10 +9,12 @@ class Login extends StatelessWidget {
       body: Container(
           color: Color(Utils.VermelhoPrincipal),
           padding: EdgeInsets.only(top: 50),
-          child: Column(
+          child: ListView(
+            padding: EdgeInsets.only(left: 25, right: 25),
             children: <Widget>[
               Text(
                 "ACESSAR MINHA CONTA",
+                textAlign: TextAlign.center,
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 18,
