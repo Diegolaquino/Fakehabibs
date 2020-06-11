@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:habibs/componentes/MainAppBar.dart';
 import 'package:habibs/componentes/MenuLateral.dart';
 import 'package:habibs/helpers/Utils.dart';
+import 'package:line_awesome_icons/line_awesome_icons.dart';
 
 class Cardapio extends StatelessWidget {
 
@@ -48,7 +49,7 @@ class Cardapio extends StatelessWidget {
                 height: 80,
               ),
               Container(
-                margin: EdgeInsets.only(top: 50, left: 20, right: 10),
+                margin: EdgeInsets.only(top: 40, left: 20, right: 10),
                 child: Row(
                   children: <Widget>[
                     Container(
@@ -56,21 +57,27 @@ class Cardapio extends StatelessWidget {
                       color: Color(Utils.VermelhoPrincipal),
                       height: 120,
                       width: 100,
-                      child: Text("Teste")
+                      child: Container(
+                        child: Icon(LineAwesomeIcons.pinterest, color: Colors.white, size: 70,)
+                      )
                     ),
                     Container(
                       margin: EdgeInsets.only(left: 2, right: 2),
                       color: Color(Utils.VermelhoPrincipal),
                       height: 120,
                       width: 100,
-                      child: Text("Teste")
+                      child: Container(
+                        child: Icon(LineAwesomeIcons.rocket, color: Colors.white, size: 70,)
+                      )
                     ),
                     Container(
                       margin: EdgeInsets.only(left: 2, right: 2),
                       color: Color(Utils.VermelhoPrincipal),
                       height: 120,
                       width: 100,
-                      child: Text("Teste")
+                      child: Container(
+                        child: Icon(LineAwesomeIcons.opera, color: Colors.white, size: 70,)
+                      )
                     )
 
                   ],
@@ -85,21 +92,27 @@ class Cardapio extends StatelessWidget {
                       color: Color(Utils.VermelhoPrincipal),
                       height: 120,
                       width: 100,
-                      child: Text("Teste")
+                      child: Container(
+                        child: Icon(LineAwesomeIcons.reddit, color: Colors.white, size: 70,)
+                      )
                     ),
                     Container(
                       margin: EdgeInsets.only(left: 2, right: 2),
                       color: Color(Utils.VermelhoPrincipal),
                       height: 120,
                       width: 100,
-                      child: Text("Teste")
+                      child: Container(
+                        child: Icon(LineAwesomeIcons.twitter, color: Colors.white, size: 70,)
+                      )
                     ),
                     Container(
                       margin: EdgeInsets.only(left: 2, right: 2),
                       color: Color(Utils.VermelhoPrincipal),
                       height: 120,
                       width: 100,
-                      child: Text("Teste")
+                      child: Container(
+                        child: Icon(LineAwesomeIcons.youtube, color: Colors.white, size: 70,)
+                      )
                     )
 
                   ],
@@ -114,21 +127,27 @@ class Cardapio extends StatelessWidget {
                       color: Color(Utils.VermelhoPrincipal),
                       height: 120,
                       width: 100,
-                      child: Text("Teste")
+                      child: Container(
+                        child: Icon(LineAwesomeIcons.facebook, color: Colors.white, size: 70,)
+                      )
                     ),
                     Container(
                       margin: EdgeInsets.only(left: 2, right: 2),
                       color: Color(Utils.VermelhoPrincipal),
                       height: 120,
                       width: 100,
-                      child: Text("Teste")
+                      child: Container(
+                        child: Icon(LineAwesomeIcons.file, color: Colors.white, size: 70,)
+                      )
                     ),
                     Container(
                       margin: EdgeInsets.only(left: 2, right: 2),
                       color: Color(Utils.VermelhoPrincipal),
                       height: 120,
                       width: 100,
-                      child: Text("Teste")
+                      child: Container(
+                        child: Icon(LineAwesomeIcons.plus, color: Colors.white, size: 70,)
+                      )
                     )
 
                   ],
