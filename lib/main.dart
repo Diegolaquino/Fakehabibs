@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-
-
-import 'MyPage.dart';
+import 'package:habibs/Splash.dart';
 
 void main() => runApp(MaterialApp(
-  home: MyPage(),
+  home: MyHomePage(),
   debugShowCheckedModeBanner: false,
 ));
