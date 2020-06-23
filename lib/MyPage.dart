@@ -62,7 +62,7 @@ class _MyPageState extends State<MyPage> {
                             color: Colors.white,
                             size: 60,
                   ),
-                  tela: TipoTela.Login,
+                  tela: TipoTela.Descontos,
                 ),
                  // botão restaurantes
                 ButtonContainer(
